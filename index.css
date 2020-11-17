@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: #cacaca;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background 0.2s linear;
+}
+
+input {
+	position: fixed;
+	opacity: 0;
+	pointer-events: none;
+}
+
+label {
+	font-size: 80px;
+	margin: 60px;
+	cursor: pointer;
+}
+
+.fa-sun,
+.fa-cloud-moon {
+	color: #cacaca;
+}
+
+.slider {
+	position: relative;
+	background: #101010;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	border-radius: 150px;
+}
+
+.check {
+	position: absolute;
+	border-radius: 50%;
+	background-color: #f082ac;
+	width: 40%;
+	height: 80%;
+	align-self: center;
+	transition: transform 0.4s linear;
+}
+
+input[type="radio"]:checked + label[for="dark"] + .check {
+	transform: translateX(150%);
+}
